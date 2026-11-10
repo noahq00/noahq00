@@ -1,6 +1,6 @@
 # Noah Quakkelaar
 
-**Security Officer · ISO 27001 Lead Auditor · I build the internal tools and platforms that take manual work out of business processes.**
+**Lead Engineer & Security Officer · ISO 27001 Lead Auditor · I build the internal tools and platforms that take manual work out of business processes.**
 
 I work where operations, security and engineering meet, at [Capestone](https://capestone.com), an IoT connectivity company in the Netherlands. I sit with the people who do the work, find where the process breaks, and then design, build, ship and run the tool that fixes it: the database, the API integrations, the access model and the deployment included.
 
@@ -40,7 +40,6 @@ AI is my lever on two levels: **inside the products** (LLM parsing with a determ
 - The database design (9 tables), TLS from an internal CA, one least-privilege service account per tool, and deploy scripts that check file ownership and permissions before and after every rollout.
 
 **Result.** 12 tools behind one gate. Access is granted or revoked in one place, with a full audit trail. 989 automated tests.
-<!-- TODO Noah: add the impact in numbers (number of users, time to give a new colleague access). -->
 
 **Stack.** Python, Flask, gunicorn, SQLite, bcrypt, nginx `auth_request`, systemd, Uptime Kuma.
 
@@ -58,7 +57,6 @@ AI is my lever on two levels: **inside the products** (LLM parsing with a determ
 **The interesting part: correctness.** Comparing two engines feels safe, but it can't see an error in the input both engines share. So I designed a correctness framework: a register of checks, coverage per error class, findings that survive a database rebuild, and an independent second measurement per data source. Its first run immediately showed which sources had usage that nothing cross-checked.
 
 **Result.** Status and usage from every source are collected and rated every night, ready for invoicing in the morning. 426 automated tests plus golden-master comparisons.
-<!-- TODO Noah: add the impact in numbers (hours saved per month, errors caught before invoicing). -->
 
 **Stack.** Python, Flask, SQLite, REST APIs, SFTP, systemd timers, PDF generation.
 
@@ -105,5 +103,3 @@ AI is my lever on two levels: **inside the products** (LLM parsing with a determ
 ## Stack
 
 Python · Flask · SQL (SQLite, PostgreSQL, MySQL) · PHP · WordPress / WooCommerce · JavaScript · REST APIs · nginx · systemd · Linux · Docker / DDEV · GitHub Actions · pytest · PHPUnit · Playwright · Claude API / Claude Code
-
-<!-- TODO Noah: add a LinkedIn link and a contact line here before making this public. -->
